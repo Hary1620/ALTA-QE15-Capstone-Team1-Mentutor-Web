@@ -20,8 +20,8 @@ This project is a Selenium-based web testing framework written in Java. It uses 
 ### Installation
 1. **Clone the repository**:
    ```bash
-   git clone github.com/Hary1620/ALTA-Selenium-QE15-Hary.git
-   cd ALTA-Selenium-QE15-Hary
+   git clone github.com/Hary1620/QE-Selenium-YouTubeTest.git
+   cd QE-Selenium-YouTubeTest
 2. **Open the project in IntelliJ IDEA**:
 Open IntelliJ IDEA.
 Select File > Open and navigate to the ALTA-Selenium directory.
