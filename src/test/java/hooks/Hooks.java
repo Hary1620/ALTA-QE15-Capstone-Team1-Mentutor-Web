@@ -43,7 +43,7 @@ public class Hooks {
        driver = new ChromeDriver(GenerateDriverChrome());
 //        driver = new EdgeDriver(GenerateEdgeDriver());
 
-        String appUrl = "https://www.youtube.com/";
+        String appUrl = "https://mentutor-fe.vercel.app/";
         driver.get(appUrl);//fungsi untuk ngebuka link html
         driver.manage().window().maximize();//fungsi untuk maximize browser
     }
