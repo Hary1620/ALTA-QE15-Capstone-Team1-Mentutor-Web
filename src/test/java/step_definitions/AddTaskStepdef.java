@@ -3,9 +3,7 @@ package step_definitions;
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.example.pageObject.AddTaskMentor;
-import org.example.pageObject.Login;
-import org.junit.Assert;
+import org.example.Mentor.AddTaskMentor;
 import org.openqa.selenium.WebDriver;
 
 public class AddTaskStepdef {
