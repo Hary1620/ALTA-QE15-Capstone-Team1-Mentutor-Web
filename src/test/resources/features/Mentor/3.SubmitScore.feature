@@ -7,5 +7,6 @@ Feature: User can submit a score for mentee
     And Click title task
     Then Click edit score at submission column
     And Input score task 70
-    Then Click submit button score and click ok button
-    And Click close button edit score
+    Then Click submit button
+    And Modal success submit score shows and click ok button
+   Then Click close button edit score

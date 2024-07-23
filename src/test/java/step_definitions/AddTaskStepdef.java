@@ -4,6 +4,7 @@ import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.example.Mentor.AddTaskMentor;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class AddTaskStepdef {
@@ -26,6 +27,22 @@ public class AddTaskStepdef {
 
     @Then("Click add button")
     public void clickAddButton() {
-        addTaskMentor.ClickAddButon();
+        addTaskMentor.ClickAddButton();
+    }
+
+    @And("Modal success shows and click ok button")
+    public void modalShowsAndClickOkButton() {
+        Assert.assertTrue(addTaskMentor.verifySuccessAddTask());
+        addTaskMentor.ClickOkButton();
+    }
+
+    @And("Required message shows")
+    public void requiredMessageShows() {
+        Assert.assertTrue(addTaskMentor.verifyRequired());
+    }
+
+    @And("Message maximal char show")
+    public void messageMaximalCharShow() {
+        Assert.assertTrue(addTaskMentor.verifyMaxChar());
     }
 }

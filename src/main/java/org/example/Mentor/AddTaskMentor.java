@@ -23,20 +23,28 @@ public class AddTaskMentor extends BasePage {
     @FindBy(xpath = "//input[@id='uploadimage-btn']")
     private WebElement inputImage;
     @FindBy(xpath = "//button[@id='input-file']")
-    private WebElement addButon;
+    private WebElement addButton;
+    @FindBy (xpath = "//button[@class='swal2-confirm swal2-styled']")
+    private WebElement okButton;
+    @FindBy (xpath = "//div[@class='swal2-success-ring']")
+    private WebElement successAddTask;
+    @FindBy (xpath = "//p[.='Title is required']")
+    private WebElement requiredTitle;
+    @FindBy(xpath = "//p[.='Description is required']")
+    private WebElement requiredDesc;
+    @FindBy (xpath = "//p[.='Due_date is required']")
+    private WebElement requiredDate;
+    @FindBy (xpath = "//p[.='Email must not exceed 255 characters']")
+    private WebElement maxTitle;
+    @FindBy(xpath = "//p[.='Description must not exceed 255 characters']")
+    private WebElement maxDesc;
 
     public void clickTaskButton(){
         scrollIntoView(taskButton);
-        waitForElementClickable(taskButton);
+        waitForElementVisible(taskButton);
         click(taskButton);
     }
-    public boolean verifyInputTaskPage(){
-        waitForElementVisible(inputTitle);
-        waitForElementVisible(inputDate);
-        waitForElementVisible(inputFile);
-        waitForElementVisible(inputImage);
-        return isDisplayed(inputTitle) && isDisplayed(inputDate) && isDisplayed(inputFile) && isDisplayed(inputImage) && isDisplayed(inputDesc);
-    }
+
     public void setInputTitle(String title){
         sendKeys(inputTitle, title);
     }
@@ -54,10 +62,29 @@ public class AddTaskMentor extends BasePage {
         String path = "C:/Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/contoh.jpg";
         sendKeys(inputImage, path);
     }
-    public void ClickAddButon(){
-        scrollIntoView(addButon);
-        waitForElementClickable(addButon);
-        click(addButon);
+    public void ClickAddButton(){
+        scrollIntoView(addButton);
+        waitForElementClickable(addButton);
+        click(addButton);
     }
-
+    public void ClickOkButton(){
+        scrollIntoView(okButton);
+        waitForElementClickable(okButton);
+        click(okButton);
+    }
+    public boolean verifySuccessAddTask(){
+        waitForElementVisible(successAddTask);
+        return isDisplayed(successAddTask);
+    }
+    public boolean verifyRequired(){
+        waitForElementVisible(requiredTitle);
+        waitForElementVisible(requiredDesc);
+        waitForElementVisible(requiredDate);
+        return isDisplayed(requiredTitle) && isDisplayed(requiredDesc) && isDisplayed(requiredDate);
+    }
+    public boolean verifyMaxChar(){
+        waitForElementVisible(maxTitle);
+        waitForElementVisible(maxDesc);
+        return isDisplayed(maxTitle) && isDisplayed(maxDesc);
+    }
 }

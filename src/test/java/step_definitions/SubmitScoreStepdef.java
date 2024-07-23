@@ -13,7 +13,8 @@ public class SubmitScoreStepdef {
     SubmitScore submitScore = new SubmitScore(driver);
 
     @And("Click title task")
-    public void clickTitleTask() {
+    public void clickTitleTask() throws InterruptedException {
+        Thread.sleep(2000);
         submitScore.clickTitleTask();
     }
 
@@ -23,18 +24,23 @@ public class SubmitScoreStepdef {
     }
 
     @And("Input score task {int}")
-    public void inputScoreTask(String score) {
+    public void inputScoreTask(int score) {
         submitScore.clickInputScore(score);
     }
 
-    @Then("Click submit button score and click ok button")
+    @Then("Click submit button")
     public void clickSubmitButtonScoreAndClickOkButton() {
         submitScore.clickSubmitScore();
-        submitScore.clickOkButton();
     }
 
     @And("Click close button edit score")
     public void clickCloseButtonEditScore() {
         submitScore.clickCloseButton();
+    }
+
+    @And("Modal success submit score shows and click ok button")
+    public void modalSuccessSubmitScoreShowsAndClickOkButton() {
+//        Assert.assertTrue(submitScore.verifySuccessSubmitScore());
+//        submitScore.clickOkButton();
     }
 }

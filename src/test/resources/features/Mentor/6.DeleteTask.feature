@@ -1,5 +1,5 @@
-Feature: Add Task by mentor
-  Scenario: Add Task mentor with valid credentials
+Feature: Delete task
+  Scenario: Delete task mentor
     When User input "mentor.mentutor@gmail.com" as username and "Mentor123$" as password
     Then User click login button
     And User should be redirect to dashboard page

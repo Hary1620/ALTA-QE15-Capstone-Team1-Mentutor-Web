@@ -17,12 +17,12 @@ public class UpdateProfileStepdef {
         updateProfile.clickPencilButton();
     }
 
-    @And("Input name {string} email {string} password {string} and images {string}")
-    public void inputNameEmailPasswordAndImages(String name, String email, String password, String images) {
+    @And("Input name {string} email {string} password {string} and images")
+    public void inputNameEmailPasswordAndImages(String name, String email, String password) {
         updateProfile.inputName(name);
         updateProfile.inputEmail(email);
         updateProfile.inputPassword(password);
-//        updateProfile.inputImages();
+        updateProfile.inputImages();
     }
 
     @Then("Click submit button and click ok button")

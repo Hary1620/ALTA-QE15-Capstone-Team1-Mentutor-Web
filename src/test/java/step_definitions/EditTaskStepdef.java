@@ -12,7 +12,8 @@ public class EditTaskStepdef {
     EditTask editTask = new EditTask(driver);
 
     @And("Click icon options task and edit")
-    public void clickIconOptionsTaskAndEdit() {
+    public void clickIconOptionsTaskAndEdit() throws InterruptedException {
+        Thread.sleep(2000);
         editTask.clickIconOptions();
         editTask.clickEditButton();
     }
@@ -36,4 +37,5 @@ public class EditTaskStepdef {
     public void clickCloseButton() {
         editTask.clickCloseButton();
     }
+
 }

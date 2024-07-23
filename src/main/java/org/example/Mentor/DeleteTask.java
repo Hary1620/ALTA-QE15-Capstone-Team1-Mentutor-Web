@@ -10,9 +10,9 @@ public class DeleteTask extends BasePage {
     public DeleteTask (WebDriver driver){
         super(driver);
     }
-    @FindBy(xpath = "//div[@class='h-screen ml-[50px] md:ml-[200px] lg:ml-[320px] relative p-6 md:px-14 md:pt-10 md:pb-10 ']/form[1]//div[@class='dropdown dropdown-bottom dropdown-end']")
+    @FindBy(xpath= "(//label[@id='icon-options'])[1]")
     private WebElement iconOptions;
-    @FindBy(id = "delete-click")
+    @FindBy(xpath = "(//li[@id='delete-click'])[1]")
     private WebElement deleteOptions;
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
     private WebElement yesButton;
@@ -21,13 +21,11 @@ public class DeleteTask extends BasePage {
 
     public void clickIconOptions(){
         scrollIntoView(iconOptions);
-        waitForElementClickable(iconOptions);
         waitForElementVisible(iconOptions);
         click(iconOptions);
     }
     public void clickDeleteOptions(){
         scrollIntoView(deleteOptions);
-        waitForElementClickable(deleteOptions);
         waitForElementVisible(deleteOptions);
         click(deleteOptions);
     }

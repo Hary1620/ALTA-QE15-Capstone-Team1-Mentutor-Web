@@ -11,7 +11,8 @@ public class DeleteTaskStepdef {
     DeleteTask deleteTask = new DeleteTask(driver);
 
     @And("Click icon options task and click delete")
-    public void clickIconOptionsTaskAndClickDelete() {
+    public void clickIconOptionsTaskAndClickDelete() throws InterruptedException {
+        Thread.sleep(2000);
         deleteTask.clickIconOptions();
         deleteTask.clickDeleteOptions();
     }

@@ -10,7 +10,7 @@ public class SubmitScore extends BasePage {
         super(driver);
     }
 
-    @FindBy (xpath = "//form[7]//h1[@id='click-title']")
+    @FindBy (xpath = "(//h1[@id='click-title'])[1]")
     private WebElement titleTask;
     @FindBy(xpath = "//div[@class='flex flex-row text-[7px] items-center md:text-[10px] lg:text-[15px] text-putih px-3 md:px-7 py-2 space-x-2 mb-1']")
     private WebElement submissionMentee;
@@ -35,8 +35,9 @@ public class SubmitScore extends BasePage {
         scrollIntoView(editScore);
         click(editScore);
     }
-    public void clickInputScore(String score){
-        sendKeys(inputScoreFields, score);
+    public void clickInputScore(int score){
+        inputScoreFields.clear();
+        sendKeys(inputScoreFields, String.valueOf(score));
     }
     public void clickSubmitScore(){
         click(submitScoreButton);
@@ -47,4 +48,7 @@ public class SubmitScore extends BasePage {
     public void clickCloseButton(){
         click(closeButton);
     }
+//    public boolean verifySuccessSubmitScore(){
+//
+//    }
 }

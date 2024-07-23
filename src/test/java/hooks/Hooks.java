@@ -44,10 +44,10 @@ public class Hooks {
         driver.manage().window().maximize();//fungsi untuk maximize browser
     }
 
-//    @After
-//    public void closeBrowser(){
-//        driver.close();
-//        driver.quit();
-//    }
+    @After
+    public void closeBrowser(){
+        driver.close();
+        driver.quit();
+    }
 }
 

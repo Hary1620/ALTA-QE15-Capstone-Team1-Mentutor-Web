@@ -20,7 +20,7 @@ public class UpdateProfile extends BasePage {
     private WebElement emailFields;
     @FindBy (xpath = "//input[@id='input-password']")
     private WebElement passwordFields;
-    @FindBy(id = "btn-upload-gbr")
+    @FindBy(xpath = "//input[@id='btn-gbr']")
     private WebElement uploadImages;
     @FindBy(xpath = "//button[@id='btn-submitMentee']")
     private WebElement submitButton;
@@ -49,11 +49,8 @@ public class UpdateProfile extends BasePage {
         sendKeys(passwordFields, password);
     }
     public void inputImages(){
-        String path = "C:/Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/contoh.jpg";
-        scrollIntoView(uploadImages);
-        waitForElementVisible(uploadImages);
-        click(uploadImages);
-        sendKeys(uploadImages, path);
+        String path = "C:\\Users\\Public\\Documents\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\file\\contoh.jpg";
+        uploadImages.sendKeys(path);
     }
     public void clickSubmitButton(){
         click(submitButton);
