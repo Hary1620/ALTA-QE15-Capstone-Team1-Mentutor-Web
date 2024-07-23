@@ -2,6 +2,7 @@ package step_definitions.Admin;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.example.pageObject.Admin.InputClass;
 import org.example.pageObject.Login.LoginAdmin;
 import org.junit.Assert;
@@ -29,5 +30,10 @@ public class AddNewClassSteps {
     @And("User click add")
     public void userClickAdd() {
         inputClass.ClickButtonAdd();
+    }
+
+    @Then("validate newly added classes {string}")
+    public void validateNewlyAddedClasses(String kalkulus) {
+        Assert.assertTrue(inputClass.verifyNewClassed());
     }
 }

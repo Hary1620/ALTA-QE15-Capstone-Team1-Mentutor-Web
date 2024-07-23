@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasePage {
-    public static final int WAIT = 10;
+    public static final int WAIT = 20;
     public static WebDriver driver;
 
     public BasePage(WebDriver driver) {

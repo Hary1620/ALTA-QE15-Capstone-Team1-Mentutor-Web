@@ -7,3 +7,4 @@ Feature: Add new class on Mentutor Website
     And User should be directed to Add class page
     And User input "Kalkulus" as Class Name
     And User click add
+    Then validate newly added classes "kalkulus"
