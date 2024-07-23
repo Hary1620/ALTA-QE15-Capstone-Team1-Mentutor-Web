@@ -14,12 +14,8 @@ public class Hooks {
 
     public static ChromeOptions GenerateDriverChrome() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox",
-                "--single-process",
-                "--ignore-ssl-errors=yes",
-                "--ignore-certificate-errors",
-                "--window-size=1280,800",
-                "--remote-allow-origins=*"
+        options.addArguments("--no-sandbox"
+
         );
         return options;
     }
@@ -40,18 +36,18 @@ public class Hooks {
     @Before
     public void openBrowser(){
         //inisiasi library selenium
-//       driver = new ChromeDriver(GenerateDriverChrome());
-        driver = new EdgeDriver(GenerateEdgeDriver());
+       driver = new ChromeDriver(GenerateDriverChrome());
+//        driver = new EdgeDriver(GenerateEdgeDriver());
 
         String appUrl = "https://mentutor-fe.vercel.app/";
         driver.get(appUrl);//fungsi untuk ngebuka link html
         driver.manage().window().maximize();//fungsi untuk maximize browser
     }
 
-    @After
-    public void closeBrowser(){
-        driver.close();
-        driver.quit();
-    }
+//    @After
+//    public void closeBrowser(){
+//        driver.close();
+//        driver.quit();
+//    }
 }
 

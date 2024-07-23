@@ -10,7 +10,7 @@ public class AddTaskMentor extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//div[@id='nav-inputtask']")
+    @FindBy(css = "#nav-inputtask")
     private WebElement taskButton;
     @FindBy(xpath = "//input[@name='title']")
     private WebElement inputTitle;
@@ -47,11 +47,11 @@ public class AddTaskMentor extends BasePage {
         sendKeys(inputDate, date);
     }
     public void setInputFile(){
-        String path = "Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/soal.pdf";
+        String path = "C:/Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/soal.pdf";
         sendKeys(inputFile, path);
     }
     public void setInputImage(){
-        String path = "Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/contoh.jpg";
+        String path = "C:/Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/contoh.jpg";
         sendKeys(inputImage, path);
     }
     public void ClickAddButon(){

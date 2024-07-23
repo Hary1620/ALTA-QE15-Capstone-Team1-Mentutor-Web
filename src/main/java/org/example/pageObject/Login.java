@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Login extends BasePage {
-public Login(WebDriver driver){
-    super(driver);
+    public Login(WebDriver driver){
+        super(driver);
     }
 
     @FindBy(xpath = "//input[@id='input-email']")
@@ -16,6 +16,8 @@ public Login(WebDriver driver){
     private WebElement inputPassword;
     @FindBy (xpath = "//button[@id='btn-login']")
     private WebElement loginButton;
+    @FindBy (xpath = "//button[@class='swal2-confirm swal2-styled']")
+    private WebElement okButton;
 
     public boolean verifyLoginMentorPage(){
         waitForElementVisible(inputEmail);
@@ -33,5 +35,9 @@ public Login(WebDriver driver){
         scrollIntoView(loginButton);
         waitForElementClickable(loginButton);
         click(loginButton);
+    }
+    public void clickOKButton(){
+        waitForElementVisible(okButton);
+        click(okButton);
     }
 }

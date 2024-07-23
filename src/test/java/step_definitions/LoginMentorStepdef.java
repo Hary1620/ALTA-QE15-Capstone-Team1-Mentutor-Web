@@ -31,6 +31,6 @@ public class LoginMentorStepdef {
 
     @And("User should be redirect to dashboard page")
     public void userShouldBeRedirectToDashboardPage() {
-        login.verifyLoginMentorPage();
+        login.clickOKButton();
     }
 }
