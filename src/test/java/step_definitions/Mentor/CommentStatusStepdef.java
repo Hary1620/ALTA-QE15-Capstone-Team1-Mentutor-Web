@@ -1,9 +1,9 @@
-package Mentor_Stepdef;
+package step_definitions.Mentor;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.example.Mentor.CommentStatus;
+import org.example.pageObject.Mentor.CommentStatus;
 import org.openqa.selenium.WebDriver;
 
 public class CommentStatusStepdef {

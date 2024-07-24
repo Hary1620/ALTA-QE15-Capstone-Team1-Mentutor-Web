@@ -1,4 +1,4 @@
-package org.example.Mentor;
+package org.example.pageObject.Mentor;
 
 import org.example.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -55,11 +55,11 @@ public class AddTaskMentor extends BasePage {
         sendKeys(inputDate, date);
     }
     public void setInputFile(){
-        String path = "C:/Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/soal.pdf";
+        String path = "C:\\Users\\haryi\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\soal.pdf";
         sendKeys(inputFile, path);
     }
     public void setInputImage(){
-        String path = "C:/Users/Public/Documents/ALTA-QE15-Capstone-Team1-Mentutor-Web/src/main/file/contoh.jpg";
+        String path = "C:\\Users\\haryi\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\contoh.jpg";
         sendKeys(inputImage, path);
     }
     public void ClickAddButton(){

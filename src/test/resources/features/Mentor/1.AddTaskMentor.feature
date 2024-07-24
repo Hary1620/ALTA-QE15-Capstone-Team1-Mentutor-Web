@@ -1,4 +1,5 @@
 Feature: Add Task by mentor
+  @coba
   Scenario: Add Task mentor with valid credentials
     When User input "mentor.mentutor@gmail.com" as username and "Mentor123$" as password
     Then User click login button

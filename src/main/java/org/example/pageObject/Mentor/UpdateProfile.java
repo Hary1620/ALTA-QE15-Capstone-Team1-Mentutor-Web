@@ -1,4 +1,4 @@
-package org.example.Mentor;
+package org.example.pageObject.Mentor;
 
 import org.example.BasePage;
 import org.openqa.selenium.WebDriver;

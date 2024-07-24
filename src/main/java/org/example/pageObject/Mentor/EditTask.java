@@ -1,4 +1,4 @@
-package org.example.Mentor;
+package org.example.pageObject.Mentor;
 
 import org.example.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -60,11 +60,11 @@ public class EditTask extends BasePage {
         sendKeys(editDate, date);
     }
     public void setEditFile (){
-        String path = "C:\\Users\\Public\\Documents\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\file\\soal.pdf";
+        String path = "C:\\Users\\haryi\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\foto1.jpg";
         editFile.sendKeys(path);
     }
     public void setEditImages(){
-        String path = "C:\\Users\\Public\\Documents\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\file\\contoh.jpg";
+        String path = "C:\\Users\\haryi\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\foto1.jpg";
         editImages.sendKeys(path);
     }
     public void clickSubmitButton(){

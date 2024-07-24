@@ -1,12 +1,12 @@
-package org.example.pageObject;
+package org.example.pageObject.Login;
 
 import org.example.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Login extends BasePage {
-    public Login(WebDriver driver){
+public class LoginMentor extends BasePage {
+    public LoginMentor(WebDriver driver){
         super(driver);
     }
 

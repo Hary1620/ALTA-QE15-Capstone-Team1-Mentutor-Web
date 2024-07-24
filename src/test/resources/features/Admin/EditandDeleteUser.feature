@@ -24,4 +24,4 @@ Feature: Edit user on Mentutor Website
       Examples:
       |action|confirm|
       |delete|cancel |
-      |delete|cancel |
+#      |delete|cancel |

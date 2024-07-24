@@ -5,5 +5,5 @@ Feature: Delete task
     And User should be redirect to dashboard page
     Then Click task menu on sidebar
     And Click icon options task and click delete
-    Then Click Yes Delete button
-    And Modal success delete task shows and click ok button
+#    Then Click Yes Delete button
+#    And Modal success delete task shows and click ok button

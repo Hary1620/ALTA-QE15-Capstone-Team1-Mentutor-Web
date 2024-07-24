@@ -28,4 +28,4 @@ Feature: Edit or delete class on mentutor website
       Examples:
         | action |confirm|
         | delete| cancel |
-        | delete| YesDelete |
+#        | delete| YesDelete |

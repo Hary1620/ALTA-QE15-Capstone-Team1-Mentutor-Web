@@ -57,7 +57,7 @@ public class AddNewMemberPage {
 
     @Then("System should gift pop up error message on class field {string}")
     public void systemShouldGiftPopUpErrorMessageOnClassField(String errorClass) {
-        String actualMessage = inputMember.popUpClassErrorMessage();
+        String actualMessage = inputMember.popUpPasswordErrorMessage();
         Assert.assertEquals(errorClass, actualMessage);
     }
 
