@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasePage {
-    public static final int WAIT = 10;
+    public static final int WAIT = 20;
     public static WebDriver driver;
 
     public BasePage(WebDriver driver) {
@@ -64,7 +64,14 @@ public class BasePage {
     public void waitForElementVisible(WebElement e) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT));
         wait.until(ExpectedConditions.visibilityOf(e));
+
     }
+
+    public void waitForElementinVisible(By overlay) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(overlay));
+    }
+
 
     public void waitForElementClickable(WebElement e) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT));
