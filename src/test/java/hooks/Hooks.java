@@ -14,12 +14,8 @@ public class Hooks {
 
     public static ChromeOptions GenerateDriverChrome() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox",
-//                "--single-process",
-                "--ignore-ssl-errors=yes",
-                "--ignore-certificate-errors",
-                "--window-size=1280,800",
-                "--remote-allow-origins=*"
+        options.addArguments("--no-sandbox"
+
         );
         return options;
     }
