@@ -1,4 +1,4 @@
-package org.example.Mentor;
+package org.example.pageObject.Mentor;
 
 import com.fasterxml.jackson.databind.ser.Serializers;
 import org.example.BasePage;

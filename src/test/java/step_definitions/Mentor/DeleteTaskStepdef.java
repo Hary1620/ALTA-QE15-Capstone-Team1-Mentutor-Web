@@ -1,9 +1,9 @@
-package Mentor_Stepdef;
+package step_definitions.Mentor;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.example.Mentor.DeleteTask;
+import org.example.pageObject.Mentor.DeleteTask;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 

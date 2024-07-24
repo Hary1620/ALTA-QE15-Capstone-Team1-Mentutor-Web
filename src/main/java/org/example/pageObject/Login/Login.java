@@ -1,4 +1,4 @@
-package org.example.pageObject;
+package org.example.pageObject.Login;
 
 import org.example.BasePage;
 import org.openqa.selenium.WebDriver;

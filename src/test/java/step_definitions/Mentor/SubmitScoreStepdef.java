@@ -1,9 +1,9 @@
-package Mentor_Stepdef;
+package step_definitions.Mentor;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.example.Mentor.SubmitScore;
+import org.example.pageObject.Mentor.SubmitScore;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
