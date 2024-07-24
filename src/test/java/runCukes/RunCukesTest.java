@@ -8,15 +8,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = {
                 "hooks",
-                "step_definitions"
+                "Mentor_Stepdef"
         },
         features = {"classpath:features/"},
         plugin = {"pretty",
                 "html:target/site/cucumber-pretty.html",
                 "json:target/cucumber/cucumber.json"
+
         }
-
-
 )
 public class RunCukesTest {
 }
