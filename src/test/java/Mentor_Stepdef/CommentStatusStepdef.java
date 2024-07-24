@@ -1,12 +1,10 @@
-package step_definitions;
+package Mentor_Stepdef;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.example.Mentor.CommentStatus;
 import org.openqa.selenium.WebDriver;
-
-import java.sql.Driver;
 
 public class CommentStatusStepdef {
     private final WebDriver driver = Hooks.driver;

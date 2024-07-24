@@ -1,10 +1,9 @@
-package step_definitions;
+package Mentor_Stepdef;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.example.Mentor.UpdateProfile;
-import org.example.pageObject.Login;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 

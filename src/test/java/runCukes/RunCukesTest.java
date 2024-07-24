@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = {
                 "hooks",
-                "step_definitions"
+                "Mentor_Stepdef"
         },
         features = {"classpath:features/"},
         plugin = {"pretty",

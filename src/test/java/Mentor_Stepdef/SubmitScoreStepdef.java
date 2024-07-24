@@ -1,4 +1,4 @@
-package step_definitions;
+package Mentor_Stepdef;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
@@ -6,8 +6,6 @@ import io.cucumber.java.en.Then;
 import org.example.Mentor.SubmitScore;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-
-import java.sql.Driver;
 
 public class SubmitScoreStepdef {
     private final WebDriver driver = Hooks.driver;
