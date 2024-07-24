@@ -48,6 +48,24 @@ public class InputMember extends BasePage {
     @FindBy (xpath = "//button[@id='btn-addMember']")
     private WebElement BtnAddMember;
 
+    @FindBy(xpath = "//p[.='Fullname is required']")
+    private WebElement ErrorMessageFullname;
+
+    @FindBy(xpath = "//p[.='Email is required']")
+    private WebElement ErrorMessageEmail;
+
+    @FindBy(xpath = "//p[.='Role is required']")
+    private WebElement ErrorMessageRole;
+
+    @FindBy(xpath = "//p[.='Class is required']")
+    private WebElement ErrorMessageClass;
+
+    @FindBy(xpath = "//p[.='Password is required']")
+    private WebElement ErrorMessagePassword;
+
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement PopupInvalid;
+
 
     public void clickButtonInputMember (){
         waitForElementVisible(BtnInputMemberPage);
@@ -95,5 +113,37 @@ public class InputMember extends BasePage {
         waitForElementVisible(BtnAddMember);
         click(BtnAddMember);
     }
+
+    public String popUpNameErrorMessage (){
+        waitForElementVisible(ErrorMessageFullname);
+        return ErrorMessageFullname.getText();
+    }
+
+    public String popUpEmailErrorMessage (){
+        waitForElementVisible(ErrorMessageEmail);
+        return ErrorMessageEmail.getText();
+    }
+
+    public String popUpRoleErrorMessage (){
+        waitForElementVisible(ErrorMessageRole);
+        return ErrorMessageRole.getText();
+    }
+
+    public String popUpClassErrorMessage (){
+        waitForElementVisible(ErrorMessageClass);
+        return ErrorMessageClass.getText();
+    }
+
+    public String popUpPasswordErrorMessage (){
+        waitForElementVisible(ErrorMessagePassword);
+        return ErrorMessagePassword.getText();
+    }
+
+    public String popUpInvalidMessage (){
+        waitForElementVisible(PopupInvalid);
+        return PopupInvalid.getText();
+    }
+
+
 
 }

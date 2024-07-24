@@ -68,6 +68,12 @@ public class InputClass extends BasePage {
     @FindBy(xpath = "//button[@class='swal2-cancel swal2-styled']")
     private WebElement btnCancelDelete;
 
+    @FindBy(xpath = "//p[.='class is required']")
+    private WebElement errorMessage;
+
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement invalidMessage;
+
 //    private By getDynamicXpath(int index, String action) {
 //        return By.xpath("//div[contains(text(), '" + index + "') and contains(text(), '" + action + "')]");
 //    }
@@ -142,13 +148,21 @@ public class InputClass extends BasePage {
 
     public void clickButtonConfirmation (String confrim) {
         waitForElementVisible(confirmdelete);
-        if (confrim.equalsIgnoreCase("delete")) {
+        if (confrim.equalsIgnoreCase("YesDelete")) {
             click(btnYesDelete);
         } else if (confrim.equalsIgnoreCase("cancel")) {
             click(btnCancelDelete);
         }
     }
+public String popUpErrorMessage (){
+        waitForElementVisible(errorMessage);
+        return errorMessage.getText();
+}
 
+    public String popUpInvalidMessage (){
+        waitForElementVisible(invalidMessage);
+        return invalidMessage.getText();
+    }
 
 }
 

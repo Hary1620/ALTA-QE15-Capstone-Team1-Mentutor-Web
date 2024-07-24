@@ -10,6 +10,8 @@ Feature: Edit user on Mentutor Website
   Examples:
     |action|newFullname|newEmail|password|class|
     |edit  |Ahmad solihin kur|ahmadsolihin12@gmail.com|Ahmad123$|Data Sains|
+    |edit  |Ahmad solihin kur|ahmadsolihin1234@gmail.com|Ahmad123$|Data Sains|
+    |edit  |Ahmad solihin kur|ahmadsolihin1234@gmail.com|Ahmad123$|Jaringan Komputer|
 
 @deleteuser
     Scenario Outline: Delete user on table list
@@ -21,4 +23,5 @@ Feature: Edit user on Mentutor Website
 
       Examples:
       |action|confirm|
+      |delete|cancel |
       |delete|cancel |

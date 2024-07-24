@@ -37,4 +37,33 @@ public class AddNewMemberPage {
     }
 
 
+    @Then("System should gift pop up error message {string}")
+    public void systemShouldGiftPopUpErrorMessage(String errorMessage) {
+        String actualMessage = inputMember.popUpNameErrorMessage();
+        Assert.assertEquals(errorMessage, actualMessage);
+    }
+
+    @Then("System should gift pop up error message on email field {string}")
+    public void systemShouldGiftPopUpErrorMessageOnEmailField(String errorEmail) {
+        String actualMessage = inputMember.popUpEmailErrorMessage();
+        Assert.assertEquals(errorEmail, actualMessage);
+    }
+
+    @Then("System should gift pop up error message on role field {string}")
+    public void systemShouldGiftPopUpErrorMessageOnRoleField(String errorRole) {
+        String actualMessage = inputMember.popUpRoleErrorMessage();
+        Assert.assertEquals(errorRole, actualMessage);
+    }
+
+    @Then("System should gift pop up error message on class field {string}")
+    public void systemShouldGiftPopUpErrorMessageOnClassField(String errorClass) {
+        String actualMessage = inputMember.popUpClassErrorMessage();
+        Assert.assertEquals(errorClass, actualMessage);
+    }
+
+    @Then("System should gift pop up invalid message  {string}")
+    public void systemShouldGiftPopUpInvalidMessage(String specialChara) {
+        String actualMessage = inputMember.popUpInvalidMessage();
+        Assert.assertEquals(specialChara, actualMessage);
+    }
 }

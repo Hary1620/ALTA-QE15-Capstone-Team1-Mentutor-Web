@@ -114,7 +114,7 @@ public class Home extends BasePage {
 
     public void clickButtonConfirmation (String confrim) {
         waitForElementVisible(ConfirmDelete);
-        if (confrim.equalsIgnoreCase("delete")) {
+        if (confrim.equalsIgnoreCase("YesDelete")) {
             click(BtnYesDelete);
         } else if (confrim.equalsIgnoreCase("cancel")) {
             click(BtnCancel);

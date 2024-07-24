@@ -31,7 +31,7 @@ public void userClicksDropdownMenuOnClassAndClickAsEditClassAndInputAsNewClassNa
     }
 
     @Then("User click {string} as confirmation")
-    public void userClickAsConfirmation(String cancel) {
-    inputClass.clickButtonConfirmation(cancel);
+    public void userClickAsConfirmation(String confirm) {
+    inputClass.clickButtonConfirmation(confirm);
     }
 }

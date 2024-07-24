@@ -36,4 +36,16 @@ public class AddNewClassSteps {
     public void validateNewlyAddedClasses(String kalkulus) {
         Assert.assertTrue(inputClass.verifyNewClassed());
     }
+
+    @Then("system will show error message {string}")
+    public void systemWillShowErrorMessage(String error) {
+        String actualMessage = inputClass.popUpErrorMessage();
+        Assert.assertEquals(error, actualMessage);
+    }
+
+    @Then("system will show pop up invalid message {string}")
+    public void systemWillShowPopUpInvalidMessage(String message) {
+        String actualMessage = inputClass.popUpInvalidMessage();
+        Assert.assertEquals(message, actualMessage);
+    }
 }

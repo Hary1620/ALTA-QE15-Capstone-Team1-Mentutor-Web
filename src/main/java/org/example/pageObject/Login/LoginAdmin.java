@@ -38,7 +38,6 @@ public class LoginAdmin extends BasePage {
     public boolean verifyLabelProduct(){
         waitForElementVisible(labelProduct);
         click(buttonOke);
-        waitForElementVisible(btninputclasspage);
         return isDisplayed(labelProduct);
     }
     public boolean verifyLoginPage(){

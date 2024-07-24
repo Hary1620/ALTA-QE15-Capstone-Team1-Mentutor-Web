@@ -12,6 +12,8 @@ Feature: Edit or delete class on mentutor website
     Examples:
     | action |newClassName|status |
     | edit kelas| Kalkulus Lanjut | non active |
+    | edit kelas| Kalkulus  | active |
+
 
     @deleteclass
     Scenario Outline: Delete Class on table list
@@ -26,3 +28,4 @@ Feature: Edit or delete class on mentutor website
       Examples:
         | action |confirm|
         | delete| cancel |
+        | delete| YesDelete |
