@@ -18,6 +18,8 @@ public class DeleteTask extends BasePage {
     private WebElement yesButton;
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
     private WebElement okButton;
+    @FindBy (xpath = "//div[@class='swal2-success-ring']")
+    private WebElement successDeleteTask;
 
     public void clickIconOptions(){
         scrollIntoView(iconOptions);
@@ -36,5 +38,9 @@ public class DeleteTask extends BasePage {
     public void clickOkButton(){
         waitForElementVisible(okButton);
         click(okButton);
+    }
+    public boolean verifyDeleteTask(){
+        waitForElementVisible(successDeleteTask);
+        return isDisplayed(successDeleteTask);
     }
 }

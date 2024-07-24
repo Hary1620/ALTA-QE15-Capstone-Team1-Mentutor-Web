@@ -4,6 +4,7 @@ import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.example.Mentor.SubmitScore;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import java.sql.Driver;
@@ -40,7 +41,23 @@ public class SubmitScoreStepdef {
 
     @And("Modal success submit score shows and click ok button")
     public void modalSuccessSubmitScoreShowsAndClickOkButton() {
-//        Assert.assertTrue(submitScore.verifySuccessSubmitScore());
-//        submitScore.clickOkButton();
+        Assert.assertTrue(submitScore.verifySuccessSubmitScore());
+        submitScore.clickOkButton();
+    }
+
+    @And("Input score task empty")
+    public void inputScoreTaskEmpty() {
+        submitScore.clearColumn();
+    }
+
+    @And("Modal failed submit score shows and click ok button")
+    public void modalFailedSubmitScoreShowsAndClickOkButton() {
+        Assert.assertTrue(submitScore.verifyFailedSubmitScore());
+        submitScore.clickOkButton();
+    }
+
+    @And("Input score task {string}")
+    public void inputScoreTask(String score) {
+        submitScore.clickInputScoreString(score);
     }
 }

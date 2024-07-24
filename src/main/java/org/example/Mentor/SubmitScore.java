@@ -24,6 +24,10 @@ public class SubmitScore extends BasePage {
     private WebElement okButton;
     @FindBy (xpath = "//label[@id='btn-close']")
     private WebElement closeButton;
+    @FindBy (xpath = "//div[@class='swal2-success-ring']")
+    private WebElement successSubmitScore;
+    @FindBy(xpath = "//div[@class='swal2-icon swal2-error swal2-icon-show']")
+    private WebElement failedSubmitScore;
 
     public void clickTitleTask(){
         scrollIntoView(titleTask);
@@ -39,6 +43,10 @@ public class SubmitScore extends BasePage {
         inputScoreFields.clear();
         sendKeys(inputScoreFields, String.valueOf(score));
     }
+    public void clickInputScoreString(String score){
+        inputScoreFields.clear();
+        sendKeys(inputScoreFields, score);
+    }
     public void clickSubmitScore(){
         click(submitScoreButton);
     }
@@ -48,7 +56,15 @@ public class SubmitScore extends BasePage {
     public void clickCloseButton(){
         click(closeButton);
     }
-//    public boolean verifySuccessSubmitScore(){
-//
-//    }
+    public boolean verifySuccessSubmitScore(){
+        waitForElementVisible(successSubmitScore);
+        return isDisplayed(successSubmitScore);
+    }
+    public boolean verifyFailedSubmitScore(){
+        waitForElementVisible(failedSubmitScore);
+        return isDisplayed(failedSubmitScore);
+    }
+    public void clearColumn(){
+        inputScoreFields.clear();
+    }
 }

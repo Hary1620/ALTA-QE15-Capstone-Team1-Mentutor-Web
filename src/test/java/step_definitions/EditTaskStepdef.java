@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.example.Mentor.EditTask;
 import org.example.pageObject.Login;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class EditTaskStepdef {
@@ -27,10 +28,10 @@ public class EditTaskStepdef {
         editTask.setEditImages();
     }
 
-    @And("Click submit button task and click ok button")
-    public void clickSubmitButtonTaskAndClickOkButton() {
+    @And("Click submit button task")
+    public void clickSubmitButtonTask() {
         editTask.clickSubmitButton();
-        editTask.clickOkButton();
+
     }
 
     @Then("Click close button")
@@ -38,4 +39,20 @@ public class EditTaskStepdef {
         editTask.clickCloseButton();
     }
 
+    @And("Modal success edit shows and click ok button")
+    public void modalSuccessEditShowsAndClickOkButton() {
+        Assert.assertTrue(editTask.verifySuccessEditTask());
+        editTask.clickOkButton();
+    }
+
+    @Then("Clear fill column")
+    public void clearFillColumn() {
+        editTask.clearCloumn();
+    }
+
+    @And("Modal failed edit shows and click ok button")
+    public void modalFailedEditShowsAndClickOkButton() {
+        Assert.assertTrue(editTask.verifyFailedEditTask());
+        editTask.clickOkButton();
+    }
 }

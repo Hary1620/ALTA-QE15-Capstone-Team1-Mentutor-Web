@@ -30,6 +30,10 @@ public class EditTask extends BasePage {
     private WebElement okButton;
     @FindBy(css = ".btn-sm")
     private WebElement closeButton;
+    @FindBy (xpath = "//div[@class='swal2-success-ring']")
+    private WebElement successEditTask;
+    @FindBy(xpath = "//div[@class='swal2-icon swal2-error swal2-icon-show']")
+    private WebElement failedEditTask;
 
     public void clickIconOptions(){
         scrollIntoView(iconOptions);
@@ -74,4 +78,18 @@ public class EditTask extends BasePage {
         waitForElementVisible(closeButton);
         click(closeButton);
     }
+    public boolean verifySuccessEditTask(){
+        waitForElementVisible(successEditTask);
+        return isDisplayed(successEditTask);
+    }
+    public boolean verifyFailedEditTask(){
+        waitForElementVisible(failedEditTask);
+        return isDisplayed(failedEditTask);
+    }
+    public void clearCloumn(){
+        editTittle.clear();
+        editDesc.clear();
+        editDate.clear();
+    }
+
 }

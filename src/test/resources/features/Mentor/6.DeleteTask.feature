@@ -6,4 +6,4 @@ Feature: Delete task
     Then Click task menu on sidebar
     And Click icon options task and click delete
     Then Click Yes Delete button
-    And Click ok button
+    And Modal success delete task shows and click ok button

@@ -4,6 +4,7 @@ import hooks.Hooks;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.example.Mentor.DeleteTask;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class DeleteTaskStepdef {
@@ -22,8 +23,9 @@ public class DeleteTaskStepdef {
         deleteTask.clickYesButton();
     }
 
-    @And("Click ok button")
+    @And("Modal success delete task shows and click ok button")
     public void clickOkButton() {
+        Assert.assertTrue(deleteTask.verifyDeleteTask());
         deleteTask.clickOkButton();
     }
 }

@@ -28,6 +28,10 @@ public class UpdateProfile extends BasePage {
     private WebElement okButton;
     @FindBy (xpath = "//label[@class='cursor-pointer btn-sm absolute right-2 top-2 text-putih border-white']")
     private WebElement closeButton;
+    @FindBy (xpath = "//div[@class='swal2-success-ring']")
+    private WebElement successEditProfile;
+    @FindBy(xpath = "//div[@class='swal2-icon swal2-error swal2-icon-show']")
+    private WebElement failedEditProfile;
 
     public void clickProfileButton(){
         scrollIntoView(profileButton);
@@ -60,5 +64,18 @@ public class UpdateProfile extends BasePage {
     }
     public void clickCloseButton(){
         click(closeButton);
+    }
+    public boolean verifySuccessEditProfile(){
+        waitForElementVisible(successEditProfile);
+        return isDisplayed(successEditProfile);
+    }
+    public boolean verifyFailedEditProfile(){
+        waitForElementVisible(failedEditProfile);
+        return isDisplayed(failedEditProfile);
+    }
+    public void clearColumn(){
+        nameFields.clear();
+        emailFields.clear();
+        passwordFields.clear();
     }
 }

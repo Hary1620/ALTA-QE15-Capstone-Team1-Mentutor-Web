@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.example.Mentor.UpdateProfile;
 import org.example.pageObject.Login;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class UpdateProfileStepdef {
@@ -19,15 +20,34 @@ public class UpdateProfileStepdef {
 
     @And("Input name {string} email {string} password {string} and images")
     public void inputNameEmailPasswordAndImages(String name, String email, String password) {
+        updateProfile.clearColumn();
         updateProfile.inputName(name);
         updateProfile.inputEmail(email);
         updateProfile.inputPassword(password);
         updateProfile.inputImages();
     }
 
-    @Then("Click submit button and click ok button")
+    @Then("Click submit button edit profile")
     public void clickSubmitButtonAndClickOkButton() {
         updateProfile.clickSubmitButton();
+
+    }
+
+    @And("Modal success edit profile shows and click ok button")
+    public void modalSuccessEditProfileShowsAndClickOkButton() {
+        Assert.assertTrue(updateProfile.verifySuccessEditProfile());
+        updateProfile.clickOkButton();
+        updateProfile.clickCloseButton();
+    }
+
+    @And("Input name, email, password, and images empty")
+    public void inputNameEmailPasswordAndImagesEmpty() {
+        updateProfile.clearColumn();
+    }
+
+    @And("Modal failed edit profile shows and click ok button")
+    public void modalFailedEditProfileShowsAndClickOkButton() {
+        Assert.assertTrue(updateProfile.verifyFailedEditProfile());
         updateProfile.clickOkButton();
         updateProfile.clickCloseButton();
     }
