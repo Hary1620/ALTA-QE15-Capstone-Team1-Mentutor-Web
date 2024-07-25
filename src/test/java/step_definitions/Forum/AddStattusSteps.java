@@ -3,8 +3,8 @@ package step_definitions.Forum;
 import hooks.Hooks;
 import io.cucumber.java.en.And;
 import org.example.pageObject.Forum.Forum;
-import org.openqa.selenium.WebDriver;
 import org.example.pageObject.Login.LoginAdmin;
+import org.openqa.selenium.WebDriver;
 
 public class AddStattusSteps {
     private final WebDriver driver = Hooks.driver;

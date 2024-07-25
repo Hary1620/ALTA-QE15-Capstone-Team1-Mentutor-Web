@@ -53,14 +53,13 @@ public class Forum extends BasePage {
 
     public void postStatus(String status){
         inputStatusField.sendKeys(status);
-        String path = "C:\\Users\\haryi\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\foto1.jpg";
+        String path = "C:\\Users\\User\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\foto1.jpg";
         btnUploadImage.sendKeys(path);
         waitForElementVisible(btnSendStatus);
         click(btnSendStatus);
     }
 
     public void postComments(String comments){
-
         sendKeys(inputCommentField,comments);
         click(btnSendComment);
     }

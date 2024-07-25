@@ -22,6 +22,16 @@ public class LoginAdmin extends BasePage {
     private WebElement buttonOke;
     @FindBy(xpath = "//a[.='Input Class']")
     private WebElement btninputclasspage;
+    @FindBy(xpath = "//div[@class='swal2-html-container']")
+    private WebElement popUpMessageInvalid;
+    @FindBy(xpath = "//p[.='password must be 8 characters']")
+    private WebElement popUpInvalidPass;
+    @FindBy(xpath = "//p[.='password must contain one uppercase']")
+    private WebElement popUpInvalidPass1;
+    @FindBy(xpath = "//p[.='password must contain one number']")
+    private WebElement popUpInvalidPass2;
+    @FindBy(xpath = "//p[.='password must contain one special character']")
+    private WebElement popUpInvalidPass3;
 
 
     public void inputFieldEmail(String Email){
@@ -46,4 +56,30 @@ public class LoginAdmin extends BasePage {
         waitForElementVisible(buttonLogin);
         return isDisplayed(fieldEmail)&& isDisplayed(fieldPassword) && isDisplayed(buttonLogin);
     }
+
+    public String popUpInvalidMessage (){
+        waitForElementVisible(popUpMessageInvalid);
+        return popUpMessageInvalid.getText();
+    }
+
+    public String popUpInvalidPassword (){
+        waitForElementVisible(popUpInvalidPass);
+        return popUpInvalidPass.getText();
+    }
+
+    public String popUpInvalidPassword1 (){
+        waitForElementVisible(popUpInvalidPass1);
+        return popUpInvalidPass1.getText();
+    }
+
+    public String popUpInvalidPassword2 (){
+        waitForElementVisible(popUpInvalidPass2);
+        return popUpInvalidPass2.getText();
+    }
+
+    public String popUpInvalidPassword3 (){
+        waitForElementVisible(popUpInvalidPass3);
+        return popUpInvalidPass3.getText();
+    }
+
 }
