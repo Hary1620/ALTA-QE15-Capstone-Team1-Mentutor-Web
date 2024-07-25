@@ -13,7 +13,7 @@ public class DeleteTaskStepdef {
 
     @And("Click icon options task and click delete")
     public void clickIconOptionsTaskAndClickDelete() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         deleteTask.clickIconOptions();
         deleteTask.clickDeleteOptions();
     }

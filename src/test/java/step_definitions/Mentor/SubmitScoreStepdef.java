@@ -13,7 +13,7 @@ public class SubmitScoreStepdef {
 
     @And("Click title task")
     public void clickTitleTask() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         submitScore.clickTitleTask();
     }
 

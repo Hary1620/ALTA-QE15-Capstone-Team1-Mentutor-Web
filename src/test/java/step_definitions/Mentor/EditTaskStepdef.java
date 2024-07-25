@@ -13,7 +13,7 @@ public class EditTaskStepdef {
 
     @And("Click icon options task and edit")
     public void clickIconOptionsTaskAndEdit() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         editTask.clickIconOptions();
         editTask.clickEditButton();
     }

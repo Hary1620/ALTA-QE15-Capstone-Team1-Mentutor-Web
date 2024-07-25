@@ -1,4 +1,4 @@
-# Selenium Web Project
+# Automation WEB Mentutor Team 1 Capstone Project
 
 ## Overview
 This project is a Selenium-based web testing framework written in Java. It uses Maven for build automation and dependency management, and Cucumber for writing test scenarios in a readable BDD (Behavior Driven Development) format.
