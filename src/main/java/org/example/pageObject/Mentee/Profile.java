@@ -64,7 +64,7 @@ public class Profile extends BasePage {
 
     }
     public void uploadProfilePicture(){
-        String path = "C:\\Users\\haryi\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\foto1.jpg";
+        String path = "C:\\Users\\User\\IdeaProjects\\ALTA-QE15-Capstone-Team1-Mentutor-Web\\src\\main\\File\\foto1.jpg";
         btnUploadImage.sendKeys(path);
     }
 

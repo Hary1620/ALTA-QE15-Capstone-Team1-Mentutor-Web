@@ -32,6 +32,5 @@ public class AssignTaskSteps {
     public void systemWilShowUpErrorMessage(String message) {
         String actualMessage = task.popUpErrorMessage();
         Assert.assertEquals(message, actualMessage);
-
     }
 }

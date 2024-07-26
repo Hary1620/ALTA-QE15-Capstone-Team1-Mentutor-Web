@@ -7,7 +7,7 @@ Feature: Assign Task by mentee on Mentutor website
     And user click submit task and select file task and click submit
     Then click ok button
 
-
+  #negative test
   Scenario: Assign multiple task
     Given User input "sintacantika@gmail.com" as email and "Sinta123!" as password and click login
     When User should be directed to the dashboard page

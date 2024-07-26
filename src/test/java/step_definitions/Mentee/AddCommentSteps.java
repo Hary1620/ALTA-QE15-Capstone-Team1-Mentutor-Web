@@ -4,6 +4,7 @@ import hooks.Hooks;
 import io.cucumber.java.en.And;
 import org.example.pageObject.Forum.Forum;
 import org.example.pageObject.Login.LoginAdmin;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class AddCommentSteps {

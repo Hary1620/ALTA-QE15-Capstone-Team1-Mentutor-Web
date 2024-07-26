@@ -10,7 +10,7 @@ public class SubmitScore extends BasePage {
         super(driver);
     }
 
-    @FindBy (xpath = "(//h1[@id='click-title'])[1]")
+    @FindBy (xpath = "(//h1[@id='click-title'])[4]")
     private WebElement titleTask;
     @FindBy(xpath = "//div[@class='flex flex-row text-[7px] items-center md:text-[10px] lg:text-[15px] text-putih px-3 md:px-7 py-2 space-x-2 mb-1']")
     private WebElement submissionMentee;
